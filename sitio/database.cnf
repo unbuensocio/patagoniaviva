@@ -1,8 +1,0 @@
-# database.cnf
-[client]
-host = patagoniaviva.cwxheibodcti.us-west-2.rds.amazonaws.com
-port = 3306
-database = patagoniaviva
-user = patagoniaviva
-password = qwe098asd
-default-character-set = utf8
