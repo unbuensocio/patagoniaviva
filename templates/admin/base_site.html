@@ -1,0 +1,37 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+{% load suit_tags %}
+
+{% block title %}{{ title }} | Administracion  {% endblock %}
+
+{% block extrahead %}
+
+{% endblock %}
+
+
+
+
+{% block header_content %}
+    {{ block.super }}
+    <div class="header-content">
+        <div class="header-column icon">
+            <i class="icon-comment"></i><br>
+            <i class="icon-home"></i>
+        </div>
+        <div class="header-column">
+            <span class="grey"> Si necesita revisar su sitio: </span><br>
+            <a href="/" target="_blank" class="grey"> {{ request.get_host }} </a>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+{% block footer_links %}
+ <a href="/docs/" class="icon"><i class="icon-question-sign"></i>Documentacion</a>   
+{% endblock %}
+
+{% block copyright %}
+  Copyright &copy; Django Suit v{{ 'VERSION'|suit_conf }} <br> Soporte Técnico <a href="http://www.unbuensocio.com" target="_blank">UnBuenSocio.com</a>
+{% endblock %}

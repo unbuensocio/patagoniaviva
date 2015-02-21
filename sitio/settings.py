@@ -30,12 +30,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #requisito
+    'suit',
+    #suit
+    'django.contrib.admin',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -98,6 +102,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'static-comun'), )
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'), )
 
+LOCALE_PATHS = (  os.path.join(BASE_DIR, 'locale'), )
+
 ### Cache
 CACHES = {
     'default': {
@@ -105,3 +111,18 @@ CACHES = {
         'LOCATION': os.path.join(BASE_DIR, 'cache/'),
     }
 }
+
+###suit
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'django.core.context_processors.request',
+)
+
+SUIT_CONFIG = {
+    # header
+    'ADMIN_NAME': 'PatagoniaViva',
+    'HEADER_DATE_FORMAT': 'l, j. F Y',
+}
+
