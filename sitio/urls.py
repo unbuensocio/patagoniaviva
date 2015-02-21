@@ -12,12 +12,13 @@ urlpatterns = patterns('',
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT,}),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT,}),    
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', include('portada.urls') ),  
 )
 
 urlpatterns += patterns('',    
     # Examples:
     # url(r'^$', 'sitio.views.home', name='home'),
-    url(r'^$', include('portada.urls') ),  
+    # url(r'^$', include('portada.urls') ),  
     # url(r'^docente/', include('docente.urls') ),
     # url(r'^alumno/', include('alumno.urls')),
     # url(r'^usuario/', include('usuario.urls')),
