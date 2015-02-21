@@ -38,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     #requisito
     'suit',
+    #propios
+    'portada',
     #suit
     'django.contrib.admin',
 )

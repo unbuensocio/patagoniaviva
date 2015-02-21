@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- Sorry no IE7 support! -->
+<!-- @see http://foundation.zurb.com/docs/index.html#basicHTMLMarkup -->
+
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+{% spaceless %} {% endspaceless %}
+<head>
+  <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <![endif]-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="no-cache" />
+  <meta name="robots" content="noarchive" />
+  <meta name="robots" content="index, follow" />
+  <meta name="rating" content="general" />
+  <meta name="author" content="UnBuenSocio.com" />
+  <meta name="generator" content="UnBuenSocio.com" />
+  <meta name="revisit-after" content="30 days" /> 
+  {% block tag_meta %}<!-- metatag --> {% endblock %}
+  <title> {% block titulo %} {% endblock %} &bull; PatagoniaViva &bull; Punta Arenas - Chile </title>
+  <!-- basico -->
+  <link rel="stylesheet" type="text/css" media="all" href="{{MEDIA_URL}}foundation/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="{{MEDIA_URL}}foundation/css/foundation.min.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="{{MEDIA_URL}}foundation-icons/foundation-icons.css" />   
+  <!-- General   -->
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}general.css" />
+  {% block tag_css %}<!-- css file --> {% endblock %}
+  <script src="{{MEDIA_URL}}foundation/js/vendor/modernizr.js"></script>
+</head>
+
+
+<body>
+
+<div id="contenido">
+      {% block contenido %} {% endblock %}
+</div>
+
+{% spaceless %}{% endspaceless %}
+<!-- [javascripts] inicio -->  
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+<script src="{{ MEDIA_URL }}foundation/js/vendor/jquery.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}foundation/js/foundation.min.js"></script>{% block java %}<!-- css file --> {% endblock %}
+<script type="text/javascript" src="{{ STATIC_URL }}general.js"></script>
+
+</body>
+</html>

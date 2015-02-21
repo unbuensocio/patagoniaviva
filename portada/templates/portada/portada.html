@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% load i18n %}
+
+{% block titulo %} Bienvenido {% endblock %}
+
+{% block tag_css %} 
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}portada/portada.css">
+{% endblock %}
+
+{% block tag_js %} {% endblock %}
+
+
+{% block tag_meta %}
+<!-- [Facebook] Inicio -->
+<meta property='og:locale' content='es_ES' />
+<meta property="og:title" content="{{ pag.titulo|title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description"  content=""/>
+{% endblock %}
+
+
+{% block contenido %}
+<div class="row">
+<div class="large-12 columns"> 
+<h1> EN CONTRUCCIÓN </h1>
+</div>
+</div>
+{% endblock %}
